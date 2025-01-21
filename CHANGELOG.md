@@ -11,3 +11,4 @@
 * Changed the palette from Forest Greens to Sea Blues
 * Add BackgroundBeams and WavyBackground
 * Add Projects Page
+* Centered a DIV

@@ -25,10 +25,10 @@ export default function Home() {
     >
       <Navbar
         pages={HomePages}
-        className="theme-1"
+        className="theme-1 z-10"
         itemClassName="transition hover:bg-[var(--bg-1)] hover:text-[var(--fg-1)]"
       />
-      <div className="flex-grow flex-center">
+      <div className="absolute h-screen w-full flex-center z-0">
         <div className="title">Hi, I&apos;m Ocean!</div>
       </div>
     </WavyBackground>
