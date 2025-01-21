@@ -3,48 +3,25 @@
 @tailwind utilities;
 
 :root {
-  --background: #d1ccc5;
-  --foreground: #171717;
-  --background2: #cbdcbd;
-  --background2: #373e35;
+  --foreground: #09172a;
+  --background: #ffedd5;
+  --bg-1: #09172a;
+  --bg-2: #212f3f;
+  --fg-1: #ffedd5;
 }
 
 /* @media (prefers-color-scheme: dark) {
   :root {
-    --foreground2: #dcd4bd;
-    --background2: #171717;
-    --foreground: #cbdcbd;
-    --background: #373e35;
+    --foreground: #d1ccc5;
+    --background: #09172a;
+    --foreground2: #bddcce;
+    --background2: #212f3f;
   }
 } */
-
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.navbar {
-  background: var(--foreground);
-  color: var(--background);
-}
-
-.btn {
-  @apply font-bold py-2 px-4 rounded;
-  color: var(--background);
-  background: var(--foreground);
-}
-
-.btn:hover {
-  transition: all 0.3s;
-  color: var(--foreground);
-  background: var(--background);
-}
-
-.title {
-  font-size: 150px;
-  font-weight: 100px;
-  margin: 0;
 }
 
 .flex-center {
@@ -53,18 +30,37 @@ body {
   align-items: center;
 }
 
-.bg-1 {
-  background: var(--background);
+.theme-1 {
+  color: var(--bg-1);
+  background: var(--fg-1);
 }
 
-.bg-2 {
-  background: var(--background2);
+.theme-1-r {
+  color: var(--fg-1);
+  background: var(--bg-1);
 }
 
-.text-1 {
-  color: var(--foreground);
+.theme-2 {
+  color: var(--bg-2);
+  background: var(--fg-1);
 }
 
-.text-2 {
-  color: var(--foreground2);
+.theme-2-r {
+  color: var(--fg-1);
+  background: var(--bg-2);
+}
+
+.btn {
+  @apply font-bold py-2 px-4 rounded;
+}
+
+.title {
+  color: #80d8a8;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-style: italic;
+  font-size: 150px;
+  font-weight: 100px;
+  margin: 0;
+  border-radius: 50px;
+  padding: 20px;
 }

@@ -1,31 +1,25 @@
+import clsx from "clsx";
 import { Container, ContainerProps } from "./container";
 
 type TextContainerProps = {
   children?: React.ReactNode;
+  outerChildren?: React.ReactNode;
   outer?: ContainerProps;
   inner?: ContainerProps;
 };
 
 export default function TextContainer({
   children,
-  outer,
-  inner,
+  outer = {},
+  inner = {},
 }: Readonly<TextContainerProps>) {
-  if (!outer)
-    outer = {
-      w: "w-full",
-      py: "py-12",
-      bgColor: "bg-2",
-    };
-  outer.classes = "flex justify-center";
-  if (!inner)
-    inner = {
-      w: "w-[60%]",
-      px: "px-12",
-      py: "py-8",
-      bgColor: "bg-1",
-    };
-  inner.classes = "text-left rounded-lg shadow-lg";
+  outer.w = outer.w || "w-full";
+  outer.py = outer.py || "py-12";
+  outer.className = clsx("flex justify-center", outer.className);
+  inner.w = inner.w || "w-[60%]";
+  inner.px = inner.px || "px-8";
+  inner.py = inner.py || "py-6";
+  inner.className = clsx("text-left rounded-lg shadow-lg", inner.className);
   return (
     <Container {...outer}>
       <Container {...inner}>{children}</Container>

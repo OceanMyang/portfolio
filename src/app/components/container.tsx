@@ -6,7 +6,7 @@ export interface ContainerProps {
   px?: string;
   py?: string;
   children?: React.ReactNode;
-  classes?: string
+  className?: string;
 }
 
 export function Container({
@@ -16,11 +16,9 @@ export function Container({
   px,
   py,
   children,
-  classes
+  className,
 }: ContainerProps) {
   return (
-    <div className={clsx(w, h, bgColor, px, py, classes)}>
-      {children}
-    </div>
+    <div className={clsx(w, h, bgColor, px, py, className)}>{children}</div>
   );
 }

@@ -1,15 +1,30 @@
-import TextContainer from "../components/textContainer";
-import Navbar from "../components/navbar";
-import { H1, H2 } from "../components/headings";
-import { Ol, Li } from "../components/list";
+import TextContainer from "../../components/textContainer";
+import { Navbar, PortfolioPages } from "../../components/navbar";
+import { H1, H2 } from "../../components/headings";
+import { Ol, Li } from "../../components/list";
 import Image from "next/image";
-import { Container } from "../components/container";
+import { Container } from "../../components/container";
+import { BackgroundBeams } from "../../components/background-beams";
 
-export default function Project0() {
+export default function HW0() {
   return (
-    <div>
-      <Navbar />
-      <TextContainer>
+    <div className="flex flex-col h-screen">
+      <Navbar
+        pages={PortfolioPages}
+        className="theme-1-r relative z-10"
+        itemClassName="transition hover:bg-[var(--fg-1)] hover:text-[var(--bg-1)]"
+      />
+      <BackgroundBeams />
+      <TextContainer
+        outer={{
+          bgColor: "theme-2-r",
+          className: "flex-grow",
+        }}
+        inner={{
+          className: "relative z-10",
+          bgColor: "theme-2",
+        }}
+      >
         <H1>Define My 5Ds</H1>
 
         <div>
@@ -72,7 +87,7 @@ export default function Project0() {
 
         <div>
           <H2>Works</H2>
-          <Container px="px-4" py="py-4" classes={"flex-center"}>
+          <Container px="px-4" py="py-4" className={"flex-center"}>
             <Image
               alt={"Narrative"}
               src={"/narrative.png"}
@@ -80,7 +95,7 @@ export default function Project0() {
               height={300}
             ></Image>
           </Container>
-          <Container px="px-4" py="py-4" classes={"flex-center"}>
+          <Container px="px-4" py="py-4" className={"flex-center"}>
             <Image
               alt={"Attention"}
               src={"/attention.png"}
@@ -88,7 +103,7 @@ export default function Project0() {
               height={300}
             ></Image>
           </Container>
-          <Container px="px-4" py="py-4" classes={"flex-center"}>
+          <Container px="px-4" py="py-4" className={"flex-center"}>
             <Image
               alt={"Expression"}
               src={"/expression.jpg"}
@@ -96,7 +111,7 @@ export default function Project0() {
               height={500}
             ></Image>
           </Container>
-          <Container px="px-4" py="py-4" classes={"flex-center"}>
+          <Container px="px-4" py="py-4" className={"flex-center"}>
             <Image
               alt={"Emotion"}
               src={"/emotion.png"}
@@ -104,7 +119,7 @@ export default function Project0() {
               height={300}
             ></Image>
           </Container>
-          <Container px="px-4" py="py-4" classes={"flex-center"}>
+          <Container px="px-4" py="py-4" className={"flex-center"}>
             <Image
               alt={"Exploration"}
               src={"/exploration.png"}
