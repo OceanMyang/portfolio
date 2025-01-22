@@ -1,6 +1,6 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 "use client";
-import { cn } from "@/app/lib/utils";
+import cn from "../lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
 
@@ -120,22 +120,19 @@ export const WavyBackground = ({
 
   return (
     <div
-      className={cn(
-        "h-screen flex flex-col items-center justify-center",
-        containerClassName
-      )}
+      className={containerClassName}
     >
+      <div className={cn("relative z-10", className)} {...props}>
+        {children}
+      </div>
       <canvas
-        className="absolute inset-0 z-0"
+        className="absolute inset-0 z-0 animate-waterRise"
         ref={canvasRef}
         id="canvas"
         style={{
           ...(isSafari ? { filter: `blur(${blur}px)` } : {}),
         }}
       ></canvas>
-      <div className={cn("relative z-10", className)} {...props}>
-        {children}
-      </div>
     </div>
   );
 };

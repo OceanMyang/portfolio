@@ -1,16 +1,16 @@
-import TextContainer from "../../components/textContainer";
-import { Navbar, PortfolioPages } from "../../components/navbar";
-import { H1, H2 } from "../../components/headings";
-import { Ol, Li } from "../../components/list";
+import TextContainer from "@/components/textContainer";
+import { Navbar, PortfolioPages } from "@/components/navbar";
+import { H1, H2 } from "@/components/headings";
+import { Ol, Li } from "@/components/list";
 import Image from "next/image";
-import { Container } from "../../components/container";
-import { BackgroundBeams } from "../../components/background-beams";
+import { Container } from "@/components/container";
+import { BackgroundBeams } from "@/components/background-beams";
 
 export default function HW0() {
   return (
     <div className="flex flex-col h-screen">
       <Navbar
-        pages={PortfolioPages}
+        items={PortfolioPages}
         className="theme-1-r relative z-10"
         itemClassName="transition hover:bg-[var(--fg-1)] hover:text-[var(--bg-1)]"
       />
@@ -87,7 +87,7 @@ export default function HW0() {
 
         <div>
           <H2>Works</H2>
-          <Container px="px-4" py="py-4" className={"flex-center"}>
+          <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Narrative"}
               src={"/narrative.png"}
@@ -95,7 +95,7 @@ export default function HW0() {
               height={300}
             ></Image>
           </Container>
-          <Container px="px-4" py="py-4" className={"flex-center"}>
+          <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Attention"}
               src={"/attention.png"}
@@ -103,7 +103,7 @@ export default function HW0() {
               height={300}
             ></Image>
           </Container>
-          <Container px="px-4" py="py-4" className={"flex-center"}>
+          <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Expression"}
               src={"/expression.jpg"}
@@ -111,7 +111,7 @@ export default function HW0() {
               height={500}
             ></Image>
           </Container>
-          <Container px="px-4" py="py-4" className={"flex-center"}>
+          <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Emotion"}
               src={"/emotion.png"}
@@ -119,7 +119,7 @@ export default function HW0() {
               height={300}
             ></Image>
           </Container>
-          <Container px="px-4" py="py-4" className={"flex-center"}>
+          <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Exploration"}
               src={"/exploration.png"}

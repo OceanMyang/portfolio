@@ -1,12 +1,12 @@
 import React from "react";
-import clsx from "clsx";
+import cn from "../lib/utils";
 import { Container } from "./container";
 
 export function Grid({
   children,
   className,
-  cols = "auto",
-  gap = "gap-0",
+  cols,
+  gap,
   childrenClassName,
 }: Readonly<{
   children: React.ReactNode;
@@ -16,7 +16,7 @@ export function Grid({
   childrenClassName?: string;
 }>) {
   return (
-    <div className={clsx("grid", cols, gap, className)}>
+    <div className={cn("grid", cols, gap, className)}>
       {React.Children.map(children, (child) => (
         <Container className={childrenClassName}>{child}</Container>
       ))}

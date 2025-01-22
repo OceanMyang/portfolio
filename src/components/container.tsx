@@ -1,10 +1,9 @@
-import clsx from "clsx";
+import cn from "../lib/utils";
 export interface ContainerProps {
   w?: string;
   h?: string;
   bgColor?: string;
-  px?: string;
-  py?: string;
+  p?: string;
   children?: React.ReactNode;
   className?: string;
 }
@@ -13,12 +12,9 @@ export function Container({
   w,
   h,
   bgColor,
-  px,
-  py,
+  p,
   children,
   className,
 }: ContainerProps) {
-  return (
-    <div className={clsx(w, h, bgColor, px, py, className)}>{children}</div>
-  );
+  return <div className={cn(w, h, bgColor, p, className)}>{children}</div>;
 }

@@ -1,4 +1,4 @@
-import clsx from "clsx";
+import cn from "../lib/utils";
 import { Container, ContainerProps } from "./container";
 
 type TextContainerProps = {
@@ -14,12 +14,11 @@ export default function TextContainer({
   inner = {},
 }: Readonly<TextContainerProps>) {
   outer.w = outer.w || "w-full";
-  outer.py = outer.py || "py-12";
-  outer.className = clsx("flex justify-center", outer.className);
+  outer.p = outer.p || "py-12";
+  outer.className = cn("flex justify-center", outer.className);
   inner.w = inner.w || "w-[60%]";
-  inner.px = inner.px || "px-8";
-  inner.py = inner.py || "py-6";
-  inner.className = clsx("text-left rounded-lg shadow-lg", inner.className);
+  inner.p = inner.p || "px-8 py-6";
+  inner.className = cn("text-left rounded-lg shadow-lg", inner.className);
   return (
     <Container {...outer}>
       <Container {...inner}>{children}</Container>

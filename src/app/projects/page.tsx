@@ -1,9 +1,9 @@
-import TextContainer from "../components/textContainer";
-import { HomePages, Navbar } from "../components/navbar";
-import { H1 } from "../components/headings";
-import { BackgroundBeams } from "../components/background-beams";
-import { Grid } from "../components/grid";
-import clsx from "clsx";
+import TextContainer from "@/components/textContainer";
+import { HomePages, Navbar } from "@/components/navbar";
+import { H1 } from "@/components/headings";
+import { BackgroundBeams } from "@/components/background-beams";
+import { Grid } from "@/components/grid";
+import cn from "@/lib/utils";
 
 function Thumbnail({
   href,
@@ -21,7 +21,7 @@ function Thumbnail({
       <img
         src={img}
         alt={title}
-        className={clsx("w-full h-full object-cover rounded-lg", imgClassName)}
+        className={cn("w-full h-full object-cover rounded-lg", imgClassName)}
       />
       <H1 className="absolute flex-center inset-0 theme-3-r opacity-90 group-hover:opacity-0 transition-opacity duration-300 rounded-lg">
         {title}
@@ -34,7 +34,7 @@ export default function Projects() {
   return (
     <div className="flex flex-col h-screen">
       <Navbar
-        pages={HomePages}
+        items={HomePages}
         className="theme-1-r relative z-10"
         itemClassName="transition hover:bg-[var(--fg-1)] hover:text-[var(--bg-1)]"
       />
@@ -42,8 +42,7 @@ export default function Projects() {
       <TextContainer
         outer={{
           className: "flex-grow justify-center",
-          px: "px-10",
-          py: "py-12",
+          p: "px-10 py-12",
           bgColor: "theme-2-r",
         }}
         inner={{
