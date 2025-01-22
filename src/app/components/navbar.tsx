@@ -34,6 +34,7 @@ export function Navbar({
 
 export const HomePages = [
   { href: "/", text: "Home" },
+  { href: "/about", text: "About" },
   { href: "/projects", text: "Projects" },
   { href: "/1250/p_0", text: "ARTF1250", className: "ms-auto" },
 ];
