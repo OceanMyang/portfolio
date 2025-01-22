@@ -1,4 +1,4 @@
-import cn from "../lib/utils";
+import { cn } from "../lib/utils";
 import Link from "next/link";
 import Image from "next/image";
 
@@ -97,7 +97,7 @@ export const PortfolioPages: NavItemProps[] = [
   { href: "./p_0", text: "HW 0" },
 ];
 
-export const InfoPages: ImgNavItemProps[] = [
+export const ExternalLinks: ImgNavItemProps[] = [
   { href: "https://github.com/OceanMyang", src: "/github.svg", alt: "GitHub" },
   {
     href: "https://www.linkedin.com/in/mingyang-zhang-ocean/",

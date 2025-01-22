@@ -1,6 +1,6 @@
 /* eslint-disable  @typescript-eslint/no-explicit-any */
 "use client";
-import cn from "../lib/utils";
+import { cn } from "../lib/utils";
 import React, { useEffect, useRef, useState } from "react";
 import { createNoise3D } from "simplex-noise";
 
@@ -70,27 +70,27 @@ export const WavyBackground = ({
     "#22d3ee",
   ];
   const drawWave = (n: number) => {
-  nt += getSpeed();
-  for (i = 0; i < n; i++) {
-    ctx.beginPath();
-    ctx.lineWidth = waveWidth || 3; // Adjust line width for distinct strokes
-    ctx.strokeStyle = waveColors[i % waveColors.length];
-    ctx.fillStyle = "rgba(0, 31, 63, 0.8)"; // Dark blue fill color with some transparency
+    nt += getSpeed();
+    for (i = 0; i < n; i++) {
+      ctx.beginPath();
+      ctx.lineWidth = waveWidth || 3; // Adjust line width for distinct strokes
+      ctx.strokeStyle = waveColors[i % waveColors.length];
+      ctx.fillStyle = "rgba(0, 31, 63, 0.8)"; // Dark blue fill color with some transparency
 
-    for (x = 0; x <= w; x += 5) {
-      const y = noise(x / 800, 0.3 * i, nt) * 100;
-      ctx.lineTo(x, y + h * 0.38196601125); // 0.38196601125 is the golden ratio
+      for (x = 0; x <= w; x += 5) {
+        const y = noise(x / 800, 0.3 * i, nt) * 100;
+        ctx.lineTo(x, y + h * 0.38196601125); // 0.38196601125 is the golden ratio
+      }
+
+      // Close the wave path and fill the area below the wave
+      ctx.lineTo(w, h); // Extend to the bottom-right corner
+      ctx.lineTo(0, h); // Extend to the bottom-left corner
+      ctx.closePath();
+
+      ctx.fill(); // Fill the area below the wave
+      ctx.stroke(); // Draw the wave stroke
     }
-
-    // Close the wave path and fill the area below the wave
-    ctx.lineTo(w, h); // Extend to the bottom-right corner
-    ctx.lineTo(0, h); // Extend to the bottom-left corner
-    ctx.closePath();
-
-    ctx.fill(); // Fill the area below the wave
-    ctx.stroke(); // Draw the wave stroke
-  }
-};
+  };
 
   let animationId: number;
   const render = () => {
@@ -119,9 +119,7 @@ export const WavyBackground = ({
   }, []);
 
   return (
-    <div
-      className={containerClassName}
-    >
+    <div className={containerClassName}>
       <div className={cn("relative z-10", className)} {...props}>
         {children}
       </div>

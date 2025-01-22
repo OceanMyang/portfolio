@@ -6,9 +6,10 @@
   --foreground: #09172a;
   --background: #ffedd5;
   --bg-1: #09172a;
-  --bg-2: #212f3f;
+  --bg-2: #0f444b;
   --bg-3: #1e052f;
   --fg-1: #ffedd5;
+  --fg-2: #80d8a8;
 }
 
 /* @media (prefers-color-scheme: dark) {
@@ -41,24 +42,24 @@ body {
   background: var(--bg-1);
 }
 
-.theme-2 {
-  color: var(--bg-2);
-  background: var(--fg-1);
+.theme-2-1 {
+  color: var(--fg-2);
+  background: var(--bg-1);
 }
 
-.theme-2-r {
+.theme-1-2 {
   color: var(--fg-1);
   background: var(--bg-2);
 }
 
-.theme-3 {
-  color: var(--bg-3);
-  background: var(--fg-1);
+.theme-2 {
+  color: var(--bg-2);
+  background: var(--fg-2);
 }
 
-.theme-3-r {
-  color: var(--fg-1);
-  background: var(--bg-3);
+.theme-2-r {
+  color: var(--fg-2);
+  background: var(--bg-2);
 }
 
 .btn {
@@ -66,7 +67,7 @@ body {
 }
 
 .title {
-  color: #80d8a8;
+  color: var(--fg-2);
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-style: italic;
   font-size: 150px;

@@ -12,3 +12,15 @@
 * Add BackgroundBeams and WavyBackground
 * Add Projects Page
 * Centered a DIV
+
+# January 21th
+
+* Fully Implemented About Page
+* Personal Information Links (Github, LinkedIn, Itch)
+* Add veil to the projects
+* SeaRise animation
+
+# January 22th
+
+* AuroraBackground
+* Improved Project Page

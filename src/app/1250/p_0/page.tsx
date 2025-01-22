@@ -1,28 +1,28 @@
-import TextContainer from "@/components/textContainer";
+import { TextContainer } from "@/components/textContainer";
 import { Navbar, PortfolioPages } from "@/components/navbar";
 import { H1, H2 } from "@/components/headings";
 import { Ol, Li } from "@/components/list";
 import Image from "next/image";
 import { Container } from "@/components/container";
-import { BackgroundBeams } from "@/components/background-beams";
+import { AuroraBackground } from "@/components/aurora-background";
 
 export default function HW0() {
   return (
-    <div className="flex flex-col h-screen">
+    <>
+      <AuroraBackground />
       <Navbar
         items={PortfolioPages}
         className="theme-1-r relative z-10"
         itemClassName="transition hover:bg-[var(--fg-1)] hover:text-[var(--bg-1)]"
       />
-      <BackgroundBeams />
       <TextContainer
         outer={{
-          bgColor: "theme-2-r",
+          bgColor: "theme-1-2",
           className: "flex-grow",
         }}
         inner={{
           className: "relative z-10",
-          bgColor: "theme-2",
+          bgColor: "theme-1",
         }}
       >
         <H1>Define My 5Ds</H1>
@@ -153,6 +153,6 @@ export default function HW0() {
           etc...
         </div>
       </TextContainer>
-    </div>
+    </>
   );
 }

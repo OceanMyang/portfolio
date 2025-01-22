@@ -1,7 +1,12 @@
 "use client";
-import { Navbar, HomePages, ImgNavbar, InfoPages } from "@/components/navbar";
+import {
+  Navbar,
+  HomePages,
+  ImgNavbar,
+  ExternalLinks,
+} from "@/components/navbar";
 import { WavyBackground } from "../components/wavy-background";
-import { useEffect, useState } from "react";;
+import { useEffect, useState } from "react";
 
 export default function Home() {
   const [fgColor, setFgColor] = useState<string | null>(null);
@@ -31,7 +36,10 @@ export default function Home() {
       <div className="absolute h-screen w-full flex-center z-0">
         <div className="title fixed">Hi, I&apos;m Ocean!</div>
       </div>
-      <ImgNavbar items={InfoPages} className="fixed bottom-0 left-0 p-12"></ImgNavbar>
+      <ImgNavbar
+        items={ExternalLinks}
+        className="fixed bottom-0 left-0 p-12"
+      ></ImgNavbar>
     </WavyBackground>
   );
 }
