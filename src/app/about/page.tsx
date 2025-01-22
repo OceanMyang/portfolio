@@ -10,13 +10,12 @@ import { BackgroundBeams } from "@/components/background-beams";
 import { Container } from "@/components/container";
 import CardStack from "@/components/cardstack";
 
-export const portraitSources = [
-  "/portrait_1.jpg",
-  "/portrait_2.jpg",
-  "/portrait_3.jpg",
-];
-
 export default function About() {
+  const portraitSources = [
+    "/portrait_1.jpg",
+    "/portrait_2.jpg",
+    "/portrait_3.jpg",
+  ];
   return (
     <div className="flex flex-col h-screen">
       <BackgroundBeams />
