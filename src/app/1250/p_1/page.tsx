@@ -3,7 +3,6 @@ import { Navbar, PortfolioPages } from "@/components/navbar";
 import { H1, H2 } from "@/components/headings";
 import { Grid } from "@/components/grid";
 import Image from "next/image";
-import { Container } from "@/components/container";
 import { AuroraBackground } from "@/components/aurora-background";
 
 export default function HW0() {
@@ -124,14 +123,25 @@ export default function HW0() {
 
         <div>
           <H2>Sketches</H2>
-          <Container p="p-4" className={"flex-center"}>
+          <Grid
+            cols="grid-cols-1"
+            gap="gap-0"
+            childrenClassName="p-4 flex-center"
+          >
             <Image
               alt={""}
               src={"/project1_sketch1.jpg"}
               width={500}
               height={300}
             ></Image>
-          </Container>
+
+            <Image
+              alt={""}
+              src={"/project1_sketch2.jpg"}
+              width={500}
+              height={300}
+            ></Image>
+          </Grid>
         </div>
 
         <div>
@@ -287,6 +297,40 @@ export default function HW0() {
             </a>
             . Accessed 30 Jan. 2025.
           </p>
+        </div>
+        <div>
+          <H2>Paper Prototyping</H2>
+
+          <Grid
+            cols="grid-cols-2"
+            gap="gap-0"
+            childrenClassName="p-4 flex-center"
+          >
+            <Image
+              alt={""}
+              src={"/prototype1.jpg"}
+              width={300}
+              height={300}
+            ></Image>
+            <Image
+              alt={""}
+              src={"/prototype2.jpg"}
+              width={300}
+              height={300}
+            ></Image>
+            <Image
+              alt={""}
+              src={"/prototype3.jpg"}
+              width={300}
+              height={300}
+            ></Image>
+            <Image
+              alt={""}
+              src={"/prototype4.jpg"}
+              width={300}
+              height={300}
+            ></Image>
+          </Grid>
         </div>
       </TextContainer>
     </>
