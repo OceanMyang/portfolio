@@ -59,7 +59,8 @@ export default function Projects() {
         <H1 className="title">Projects</H1>
         <Grid
           className="rounded-lg"
-          cols="grid-cols-1 md:grid-cols-4 gap-8"
+          cols="grid-cols-1 md:grid-cols-4"
+          gap="gap-8"
           childrenClassName="h-auto"
         >
           <Thumbnail

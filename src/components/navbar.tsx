@@ -94,7 +94,9 @@ export const HomePages: NavItemProps[] = [
 
 export const PortfolioPages: NavItemProps[] = [
   { href: "/", text: "Home" },
-  { href: "./p_0", text: "HW 0" },
+  { href: "./p_0", text: "Project 0" },
+  { href: "./p_1", text: "Project 1" },
+
 ];
 
 export const ExternalLinks: ImgNavItemProps[] = [

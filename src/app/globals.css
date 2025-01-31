@@ -77,3 +77,7 @@ body {
 iframe {
   border: none;
 }
+
+img {
+  border-radius: 5px;
+}
