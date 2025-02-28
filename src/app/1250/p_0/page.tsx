@@ -1,4 +1,4 @@
-import { TextContainer } from "@/components/textContainer";
+import { TextContainer } from "@/components/text-container";
 import { Navbar, PortfolioPages } from "@/components/navbar";
 import { H1, H2 } from "@/components/headings";
 import { Ol, Li } from "@/components/list";
@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Container } from "@/components/container";
 import { AuroraBackground } from "@/components/aurora-background";
 
-export default function HW0() {
+export default function Project0() {
   return (
     <>
       <AuroraBackground />
@@ -27,7 +27,7 @@ export default function HW0() {
       >
         <H1>Define My 5Ds</H1>
 
-        <div>
+        <section>
           <H2>Definitions</H2>
           <Ol>
             <Li>measure in one direction</Li>
@@ -44,25 +44,25 @@ export default function HW0() {
               the range over which or the degree to which something extends
             </Li>
           </Ol>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <H2>Etymology</H2>
           <Ol>
             <Li>
               The word came from Middle English dimensio, meaning to measure out
             </Li>
           </Ol>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <H2>Brainstorm</H2>
           Brainstorming… Story, Narrative, Attraction, Visual, Color,
           Expression, Response, Emotion, Composition, Inspiration,
           Entertainment, Fluency, Consistency, Aesthetics, Resonance, Harmony
-        </div>
+        </section>
 
-        <div>
+        <section>
           <H2>My Five Dimensions</H2>
           <Ol>
             <Li>Narrative</Li>
@@ -71,9 +71,9 @@ export default function HW0() {
             <Li>Exploration</Li>
             <Li>Emotion</Li>
           </Ol>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <H2>Mindmap</H2>
           <div className="flex-center">
             <iframe
@@ -83,14 +83,14 @@ export default function HW0() {
               height={500}
             ></iframe>
           </div>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <H2>Works</H2>
           <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Narrative"}
-              src={"/narrative.png"}
+              src={"/img/p_0/narrative.png"}
               width={500}
               height={300}
             ></Image>
@@ -98,7 +98,7 @@ export default function HW0() {
           <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Attention"}
-              src={"/attention.png"}
+              src={"/img/p_0/attention.png"}
               width={500}
               height={300}
             ></Image>
@@ -106,7 +106,7 @@ export default function HW0() {
           <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Expression"}
-              src={"/expression.jpg"}
+              src={"/img/p_0/expression.jpg"}
               width={300}
               height={500}
             ></Image>
@@ -114,7 +114,7 @@ export default function HW0() {
           <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Emotion"}
-              src={"/emotion.png"}
+              src={"/img/p_0/emotion.png"}
               width={500}
               height={300}
             ></Image>
@@ -122,36 +122,37 @@ export default function HW0() {
           <Container p="p-4" className={"flex-center"}>
             <Image
               alt={"Exploration"}
-              src={"/exploration.png"}
+              src={"/img/p_0/exploration.png"}
               width={500}
               height={300}
             ></Image>
           </Container>
-        </div>
+        </section>
 
-        <div>
+        <section>
           <H2>Reflection</H2>
           Through this exercise, I learned the definition of interactive
-          experience and what we’re doing over the course. Before this exercise,
-          the word “interactive experience” sounds very blurry and ambiguous to
-          me. The five dimensions gave me a rough understanding of this word,
-          but these words were still flat abstractions with no content in my
-          head. When I was searching the word dimensions over and over again, I
-          explored more and more about how the five dimensions constitute the
-          experience as a whole and at the same time uniquely identified against
-          each other. When their relationships turned clearer, I think my
-          definition of “interactive experience” became more accurate. Moreover,
-          in creating my own five dimensions, I discovered the relationship
-          between the dimensions and myself. I thought of my own experiences,
-          the choices I have made for my life, the knowledge I had in my head,
-          and some designs I’ve seen and were beautiful. Meanwhile, my learning
-          didn’t proceed through lectures or reading, but experiencing the
-          “interactive experience” myself and turning it into something that
-          belongs to me. Therefore, “interactive experience” is no longer a
-          blurry abstract concept in the textbook but something tangible, like a
-          piece of memory, a work I created, or some of my thoughts I expressed
-          etc...
-        </div>
+          experience and what we&apos;re doing over the course. Before this
+          exercise, the word &quot;interactive experience&quot; sounds very
+          blurry and ambiguous to me. The five dimensions gave me a rough
+          understanding of this word, but these words were still flat
+          abstractions with no content in my head. When I was searching the word
+          dimensions over and over again, I explored more and more about how the
+          five dimensions constitute the experience as a whole and at the same
+          time uniquely identified against each other. When their relationships
+          turned clearer, I think my definition of &quot;interactive
+          experience&quot; became more accurate. Moreover, in creating my own
+          five dimensions, I discovered the relationship between the dimensions
+          and myself. I thought of my own experiences, the choices I have made
+          for my life, the knowledge I had in my head, and some designs
+          I&apos;ve seen and were beautiful. Meanwhile, my learning didn&apos;t
+          proceed through lectures or reading, but experiencing the
+          &quot;interactive experience&quot; myself and turning it into
+          something that belongs to me. Therefore, &quot;interactive
+          experience&quot; is no longer a blurry abstract concept in the
+          textbook but something tangible, like a piece of memory, a work I
+          created, or some of my thoughts I expressed etc...
+        </section>
       </TextContainer>
     </>
   );

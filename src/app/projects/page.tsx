@@ -1,14 +1,15 @@
-import { TextContainer } from "../../components/textContainer";
+import { TextContainer } from "../../components/text-container";
 import { HomePages, Navbar } from "../../components/navbar";
 import { H1 } from "../../components/headings";
 import { AuroraBackground } from "@/components/aurora-background";
 import { Grid } from "../../components/grid";
 import { cn } from "../../lib/utils";
+import Image from "next/image";
 
 function Thumbnail({
   href,
-  title,
-  img,
+  title = "",
+  img = "/default.png",
   imgClassName,
 }: {
   href?: string;
@@ -18,10 +19,13 @@ function Thumbnail({
 }) {
   return (
     <a href={href} className="z-10 relative group" title={title}>
-      <img
+      <Image
         src={img}
         alt={title}
         className={cn("w-full h-full object-cover rounded-lg", imgClassName)}
+        layout="responsive"
+        width={500}
+        height={300}
       />
       <div
         className={cn(
@@ -66,23 +70,23 @@ export default function Projects() {
           <Thumbnail
             href="https://picbookgen.com"
             title="PicBookGen"
-            img="/PBG.png"
+            img="/img/projects/PBG.png"
             imgClassName="object-left-top"
           />
           <Thumbnail
             href="https://oceanmyang.github.io/dragon_balls/"
             title="Dragon Balls"
-            img="/DB.png"
+            img="/img/projects/DB.png"
           />
           <Thumbnail
             href="https://oceanmyang.itch.io/night-at-the-museum"
             title="Night at the Museum"
-            img="/NATM.png"
+            img="/img/projects/NATM.png"
           />
           <Thumbnail
             href="https://oceanmyang.itch.io/worm-man"
             title="Worm Man"
-            img="/WM.png"
+            img="/img/projects/WM.png"
           />
         </Grid>
       </TextContainer>

@@ -1,4 +1,4 @@
-import { TextContainer } from "@/components/textContainer";
+import { TextContainer } from "@/components/text-container";
 import {
   HomePages,
   ImgNavbar,
@@ -12,9 +12,9 @@ import CardStack from "@/components/cardstack";
 
 export default function About() {
   const portraitSources = [
-    "/portrait_1.jpg",
-    "/portrait_2.jpg",
-    "/portrait_3.jpg",
+    "/img/portraits/portrait_1.jpg",
+    "/img/portraits/portrait_2.jpg",
+    "/img/portraits/portrait_3.jpg",
   ];
   return (
     <div className="flex flex-col h-screen">
@@ -45,13 +45,16 @@ export default function About() {
               className="font-serif text-xl p-6 rounded-lg"
             >
               <Container p="pb-[30px]">
-                Hi! I&apos;m Mingyang Zhang. You can call me <span className="text-sky-800 italic">Ocean</span>.
+                Hi! I&apos;m Mingyang Zhang. You can call me{" "}
+                <span className="text-sky-800 italic">Ocean</span>.
               </Container>
               <Container p="pb-[30px]">
-                I&apos;m a computer science sophomore at <b>Northeastern University</b>.
+                I&apos;m a computer science sophomore at{" "}
+                <b>Northeastern University</b>.
               </Container>
-              I&apos;m especially interested in how computers bring unique <span className="text-indigo-600">experiences</span> to users via different media, such as narratives and
-              games.
+              I&apos;m especially interested in how computers bring unique{" "}
+              <span className="text-indigo-600">experiences</span> to users via
+              different media, such as narratives and games.
             </Container>
             <CardStack imageSources={portraitSources} />
           </Container>
