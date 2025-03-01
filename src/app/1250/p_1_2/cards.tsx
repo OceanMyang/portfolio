@@ -334,7 +334,7 @@ export function MobileApp() {
             href="https://v0-chat-app-design.vercel.app/"
             className="hover:underline font-bold transition duration-200"
           >
-            Click here to download our mobile app.
+            Click here to download our app.
           </Link>
         </span>{" "}
         We&apos;ve partnered with <strong>NeuroVoice</strong> to bring you the

@@ -74,7 +74,7 @@ export default function Project2() {
       >
         <H1>Fictional Object: MySpeaker</H1>
 
-        <div className="bg-white p-20 rounded-2xl mb-10 md:mb-20 shadow-lg">
+        <div className="bg-white p-5 md:p-10 lg:p-20 rounded-2xl mb-10 md:mb-20 shadow-lg">
           <div className="flex-center">
             <Image
               src="/img/p_1/product.png"
@@ -85,14 +85,14 @@ export default function Project2() {
             />
           </div>
 
-          <div className="text-lg tracking-widest max-w-3xl mx-auto text-black">
+          <div className="text-sm md:text-lg tracking-widest max-w-3xl mx-auto text-black">
             Have you ever had the feeling the word is lingering on the verge of
             your mouth, but you just can&apos;t spit it out?
             <br />
             Have you felt so indifferent, unable to express your love to the one
             you love?
             <br />
-            Well, <strong className="text-xl italic">MySpeaker</strong> will
+            Well, <strong className="text-base md:text-xl italic">MySpeaker</strong> will
             speak for you. If you want to say something, it will say something
             loud and clear. MySpeaker will be your most loyal voice and
             representative.
@@ -142,7 +142,7 @@ export default function Project2() {
             href="https://v0-chat-app-design.vercel.app/"
             className="hover:underline transition duration-200"
           >
-            Click here to download our mobile app!
+            Click here to download our app!
           </Link>
         </div>
       </TextContainer>
