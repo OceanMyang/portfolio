@@ -140,25 +140,12 @@ export default function Project1Prep() {
 
         <section>
           <H2>Sketches</H2>
-          <Grid
-            cols="grid-cols-1"
-            gap="gap-0"
-            childrenClassName="p-4 flex-center"
-          >
-            <Image
-              alt={""}
-              src={"/img/p_1/sketches.jpg"}
-              width={500}
-              height={300}
-            ></Image>
-
-            <Image
-              alt={""}
-              src={"/img/p_1/app.jpg"}
-              width={500}
-              height={300}
-            ></Image>
-          </Grid>
+          <Image
+            alt={""}
+            src={"/img/p_1/sketches.jpg"}
+            width={500}
+            height={300}
+          ></Image>
         </section>
 
         <section>

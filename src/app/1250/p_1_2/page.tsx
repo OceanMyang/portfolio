@@ -4,7 +4,14 @@ import { H1, H2 } from "@/components/headings";
 import Accordion from "@/components/accordion";
 import { Carousel, Card } from "@/components/carousel";
 import Image from "next/image";
-import { Attributes, Processes, StoryBoard, Usage, Values } from "./cards";
+import {
+  Attributes,
+  Processes,
+  StoryBoard,
+  Usage,
+  Values,
+  MobileApp,
+} from "./cards";
 import Link from "next/link";
 export default function Project2() {
   const data = [
@@ -38,6 +45,12 @@ export default function Project2() {
       category: "Where?",
       content: <Usage />,
     },
+    {
+      src: "data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0IiBmaWxsPSJub25lIiBzdHJva2U9IiMyNkM2REEiIHN0cm9rZS13aWR0aD0iMiIgc3Ryb2tlLWxpbmVjYXA9InJvdW5kIiBzdHJva2UtbGluZWpvaW49InJvdW5kIiBjbGFzcz0ibHVjaWRlIGx1Y2lkZS1icmFpbiI+PHBhdGggZD0iTTEyIDVhMyAzIDAgMSAwLTUuOTk3LjEyNSA0IDQgMCAwIDAtMi41MjYgNS43NyA0IDQgMCAwIDAgLjU1NiA2LjU4OEE0IDQgMCAxIDAgMTIgMThaIi8+PHBhdGggZD0iTTEyIDVhMyAzIDAgMSAxIDUuOTk3LjEyNSA0IDQgMCAwIDEgMi41MjYgNS43NyA0IDQgMCAwIDEtLjU1NiA2LjU4OEE0IDQgMCAxIDEgMTIgMThaIi8+PHBhdGggZD0iTTE1IDEzYTQuNSA0LjUgMCAwIDEtMy00IDQuNSA0LjUgMCAwIDEtMyA0Ii8+PHBhdGggZD0iTTE3LjU5OSA2LjVhMyAzIDAgMCAwIC4zOTktMS4zNzUiLz48cGF0aCBkPSJNNi4wMDMgNS4xMjVBMyAzIDAgMCAwIDYuNDAxIDYuNSIvPjxwYXRoIGQ9Ik0zLjQ3NyAxMC44OTZhNCA0IDAgMCAxIC41ODUtLjM5NiIvPjxwYXRoIGQ9Ik0xOS45MzggMTAuNWE0IDQgMCAwIDEgLjU4NS4zOTYiLz48cGF0aCBkPSJNNiAxOGE0IDQgMCAwIDEtMS45NjctLjUxNiIvPjxwYXRoIGQ9Ik0xOS45NjcgMTcuNDg0QTQgNCAwIDAgMSAxOCAxOCIvPjwvc3ZnPg==",
+      title: "NeuroVoice",
+      category: "Our Mobile App",
+      content: <MobileApp />,
+    },
   ];
   const cards = data.map((card, index) => (
     <Card key={card.src} card={card} index={index} />
@@ -61,7 +74,7 @@ export default function Project2() {
       >
         <H1>Fictional Object: MySpeaker</H1>
 
-        <div className="bg-white p-20 rounded-2xl m-20 mt-10 shadow-lg">
+        <div className="bg-white p-20 rounded-2xl mb-10 md:mb-20 shadow-lg">
           <div className="flex-center">
             <Image
               src="/img/p_1/product.png"

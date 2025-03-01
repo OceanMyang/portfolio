@@ -30,15 +30,19 @@ export function Navbar({
   padding?: string;
   gap?: string;
 }) {
-  const p = padding || "px-10 py-5";
-  const g = gap || "gap-x-8";
+  const p = padding || "px-3 py-3 md:px-10 md:py-5";
+  const g = gap || "gap-x-2 md:gap-x-8";
   return (
-    <nav className={cn("navbar flex", p, g, className)}>
+    <nav className={cn("navbar flex flex-wrap", p, g, className)}>
       {items.map((item, index) => (
         <Link
           key={index}
           tabIndex={index}
-          className={cn("btn", itemClassName, item.className)}
+          className={cn(
+            "btn text-sm md:text-base",
+            itemClassName,
+            item.className
+          )}
           href={item.href}
         >
           {item.text}
@@ -67,8 +71,8 @@ export function ImgNavbar({
 }) {
   const p = padding || "p-2";
   const g = gap || "gap-x-2";
-  const w = itemWidth || 30;
-  const h = itemHeight || 30;
+  const w = itemWidth || 24;
+  const h = itemHeight || 24;
   return (
     <nav className={cn("navbar flex", p, g, className)}>
       {items.map((item, index) => (
@@ -78,7 +82,13 @@ export function ImgNavbar({
           className={cn("btn", itemClassName, item.className)}
           href={item.href}
         >
-          <Image src={item.src} alt={item.alt} width={w} height={h} />
+          <Image
+            src={item.src}
+            alt={item.alt}
+            width={w}
+            height={h}
+            className="md:w-[30px] md:h-[30px]"
+          />
         </Link>
       ))}
     </nav>

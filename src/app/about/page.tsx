@@ -27,28 +27,28 @@ export default function About() {
       <TextContainer
         outer={{
           className: "flex-grow justify-center",
-          p: "px-10 py-12",
+          p: "px-4 py-6 md:px-10 md:py-12",
           bgColor: "theme-2-r",
         }}
         inner={{
           className: "relative z-10",
-          w: "w-[60%]",
+          w: "w-[95%] md:w-[80%] lg:w-[60%]",
           bgColor: "theme-1-r",
         }}
       >
         <Container className="flex-center flex-col w-full h-full">
           <H1 className="font-[cursive]">About Me</H1>
-          <Container className="flex justify-evenly items-center gap-12">
+          <Container className="flex flex-col md:flex-row justify-evenly items-center gap-[5rem] md:gap-12">
             <Container
-              w="w-[50%]"
+              w="w-full md:w-[50%]"
               bgColor="theme-1"
-              className="font-serif text-xl p-6 rounded-lg"
+              className="font-serif text-base md:text-xl p-4 md:p-6 rounded-lg"
             >
-              <Container p="pb-[30px]">
+              <Container p="pb-[15px] md:pb-[30px]">
                 Hi! I&apos;m Mingyang Zhang. You can call me{" "}
                 <span className="text-sky-800 italic">Ocean</span>.
               </Container>
-              <Container p="pb-[30px]">
+              <Container p="pb-[15px] md:pb-[30px]">
                 I&apos;m a computer science sophomore at{" "}
                 <b>Northeastern University</b>.
               </Container>

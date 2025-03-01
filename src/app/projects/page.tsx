@@ -29,7 +29,7 @@ function Thumbnail({
       />
       <div
         className={cn(
-          "absolute flex-center inset-0 theme-2-r rounded-lg shadow-lg text-xl text-center",
+          "absolute flex-center inset-0 theme-2-r rounded-lg shadow-lg text-base md:text-xl text-center p-2",
           "transition-opacity duration-300 opacity-90 group-hover:opacity-0 text-opacity-5"
         )}
       >
@@ -51,20 +51,20 @@ export default function Projects() {
       <TextContainer
         outer={{
           className: "flex-grow flex-center",
-          p: "py-12",
+          p: "py-6 md:py-12",
           bgColor: "bg-transparent",
         }}
         inner={{
           className: "relative z-10",
-          w: "w-[80%]",
+          w: "w-[95%] md:w-[90%] lg:w-[80%]",
           bgColor: "bg-transparent",
         }}
       >
         <H1 className="title">Projects</H1>
         <Grid
           className="rounded-lg"
-          cols="grid-cols-1 md:grid-cols-4"
-          gap="gap-8"
+          cols="grid-cols-1 sm:grid-cols-2 lg:grid-cols-4"
+          gap="gap-4 md:gap-8"
           childrenClassName="h-auto"
         >
           <Thumbnail

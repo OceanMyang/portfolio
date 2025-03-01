@@ -34,11 +34,11 @@ export default function Home() {
         itemClassName="transition hover:bg-[var(--bg-1)] hover:text-[var(--fg-1)]"
       />
       <div className="absolute h-screen w-full flex-center z-0">
-        <div className="title fixed">Hi, I&apos;m Ocean!</div>
+        <div className="title fixed px-4 text-center">Hi, I&apos;m Ocean!</div>
       </div>
       <ImgNavbar
         items={ExternalLinks}
-        className="fixed bottom-0 left-0 p-12"
+        className="fixed bottom-0 left-0 p-4 md:p-12"
       ></ImgNavbar>
     </WavyBackground>
   );

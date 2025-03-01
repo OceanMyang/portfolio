@@ -74,18 +74,6 @@ export default function Project0() {
         </section>
 
         <section>
-          <H2>Mindmap</H2>
-          <div className="flex-center">
-            <iframe
-              title="mindmap"
-              src="https://miro.com/app/board/uXjVK9pP2rY=/?share_link_id=666082795456"
-              width={700}
-              height={500}
-            ></iframe>
-          </div>
-        </section>
-
-        <section>
           <H2>Works</H2>
           <Container p="p-4" className={"flex-center"}>
             <Image

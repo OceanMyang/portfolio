@@ -15,7 +15,7 @@ const CardStack = ({ imageSources }: { imageSources: string[] }) => {
     }
   };
   return (
-    <div className="relative w-60 h-80 group">
+    <div className="relative w-48 h-64 md:w-60 md:h-80 group">
       {cards.slice(0, 3).map((src, index) => (
         <div
           key={index}
@@ -24,9 +24,9 @@ const CardStack = ({ imageSources }: { imageSources: string[] }) => {
             "transition-transform duration-300 origin-bottom cursor-pointer",
             {
               "z-30 -rotate-3 group-hover:-rotate-6": index % 3 === 0,
-              "z-20 rotate-3 -translate-y-10 hover:-translate-y-20":
+              "z-20 rotate-3 -translate-y-8 md:-translate-y-10 hover:-translate-y-16 md:hover:-translate-y-20":
                 index % 3 === 1,
-              "z-10 rotate-6 group-hover:rotate-12 -translate-y-20 hover:-translate-y-32":
+              "z-10 rotate-6 group-hover:rotate-12 -translate-y-16 md:-translate-y-20 hover:-translate-y-24 md:hover:-translate-y-32":
                 index % 3 === 2,
             }
           )}

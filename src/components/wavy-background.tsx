@@ -73,12 +73,17 @@ export const WavyBackground = ({
     nt += getSpeed();
     for (i = 0; i < n; i++) {
       ctx.beginPath();
-      ctx.lineWidth = waveWidth || 3; // Adjust line width for distinct strokes
+      ctx.lineWidth = waveWidth || (window.innerWidth < 768 ? 2 : 3); // Adjust line width for mobile
       ctx.strokeStyle = waveColors[i % waveColors.length];
       ctx.fillStyle = "rgba(0, 31, 63, 0.8)"; // Dark blue fill color with some transparency
 
-      for (x = 0; x <= w; x += 5) {
-        const y = noise(x / 800, 0.3 * i, nt) * 100;
+      // Adjust step size based on screen width for better performance on mobile
+      const stepSize = window.innerWidth < 768 ? 10 : 5;
+
+      for (x = 0; x <= w; x += stepSize) {
+        // Adjust amplitude based on screen width
+        const amplitude = window.innerWidth < 768 ? 70 : 100;
+        const y = noise(x / 800, 0.3 * i, nt) * amplitude;
         ctx.lineTo(x, y + h * 0.38196601125); // 0.38196601125 is the golden ratio
       }
 
@@ -97,7 +102,7 @@ export const WavyBackground = ({
     ctx.fillStyle = backgroundFill || "black";
     ctx.globalAlpha = waveOpacity || 0.5;
     ctx.fillRect(0, 0, w, h);
-    drawWave(5);
+    drawWave(window.innerWidth < 768 ? 3 : 5); // Reduce number of waves on mobile
     animationId = requestAnimationFrame(render);
   };
 
@@ -119,7 +124,12 @@ export const WavyBackground = ({
   }, []);
 
   return (
-    <div className={containerClassName}>
+    <div
+      className={cn(
+        "relative w-full h-full overflow-hidden",
+        containerClassName
+      )}
+    >
       <div className={cn("relative z-10", className)} {...props}>
         {children}
       </div>
