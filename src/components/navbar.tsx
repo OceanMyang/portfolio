@@ -108,6 +108,7 @@ export const PortfolioPages: NavItemProps[] = [
   { href: "./p_1_1", text: "Project 1 Prep" },
   { href: "./p_1_2", text: "Project 1" },
   { href: "./p_2_1", text: "Project 2 Prep" },
+  { href: "./p_2_2", text: "Project 2" },
 ];
 
 export const ExternalLinks: ImgNavItemProps[] = [
