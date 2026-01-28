@@ -99,15 +99,13 @@ export const HomePages: NavItemProps[] = [
   { href: "/", text: "Home" },
   { href: "/about", text: "About" },
   { href: "/projects", text: "Projects" },
-  { href: "/1250/p_1_2", text: "Design Experience", className: "ms-auto" },
+  { href: "/designs", text: "Designs" },
 ];
 
 export const PortfolioPages: NavItemProps[] = [
   { href: "/", text: "Home" },
-  { href: "./p_0", text: "Project 0" },
-  { href: "./p_1_1", text: "Project 1 Prep" },
-  { href: "./p_1_2", text: "Project 1" },
-  { href: "./p_2_1", text: "Project 2 Prep" },
+  { href: "/designs", text: "Designs" },
+  { href: "/designs/my_speaker", text: "MySpeaker" },
 ];
 
 export const ExternalLinks: ImgNavItemProps[] = [
